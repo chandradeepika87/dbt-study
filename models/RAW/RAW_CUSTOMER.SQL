@@ -1,9 +1,4 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
 
-
-
-SELECT * FROM STUDY_DBT.GLOBALMART.CUSTOMER
+SELECT * 
+FROM 
+{{ source('globalmart', 'customer') }}

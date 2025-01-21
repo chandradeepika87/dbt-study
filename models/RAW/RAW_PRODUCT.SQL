@@ -1,9 +1,3 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
-
-
-
-SELECT * FROM STUDY_DBT.GLOBALMART.PRODUCT
+SELECT * 
+FROM 
+{{ source('globalmart', 'product') }}
